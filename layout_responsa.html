@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Responsa</title>
+    <style>
+        * {
+            block-size: border-box;
+        }
+
+        html {
+            font-size: 20px;
+        }
+
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: beige;
+        }
+
+        #container {
+            background-color: white;
+            box-shadow: black 0 0 10px;
+            padding: 1%;
+        }
+
+        header {
+            background-color: rgb(91, 129, 255);
+            text-align: center;
+        }
+
+        h1, h2, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background-color: yellow;
+        }
+
+        #colunaA {
+            background-color: darkseagreen;
+        }
+
+        #colunaB {
+            background-color: orange;
+        }
+
+        #colunaC {
+            background-color: pink;
+        }
+
+        footer {
+            background-color: gray;
+        }
+
+        h2, p {
+            padding: 1rem;
+        }
+        
+        @media screen and (min-width: 700px){
+            header {
+                display: flex;
+                justify-content: space-between; 
+                height: 80px;
+                align-items: center;
+            }
+
+            nav {
+                height: 40px;
+                width: 50%;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+            }
+            main {
+                display: flex;
+                flex-wrap: wrap;            
+            }
+            #colunaA {
+                width: 60%;
+            }
+            #colunaB {
+                width: 40%;
+            }
+            #colunaC {
+                width: 100%;
+            }
+        }
+
+        @media screen and (min-width: 900px){
+            #colunaA, #colunaB, #colunaC { width: 33.33%; }
+            #container {
+                max-width: 1100px;
+                margin: auto;
+            }
+            html {
+                font-size: 20px;
+            }
+        }
+
+    </style>
+</head>
+<body>    
+    <!-- Aqui estamos usando a container para agrupar todas as tags do layout do site -->
+    <div id="container">
+        <header>
+            <!-- Nome/Logo do site -->
+            <h1>Mobile First</h1>
+            <!-- Menu -->
+            <nav>
+                <a href="">Link</a>
+                <a href="">Link</a>
+                <a href="">Link</a>
+            </nav>
+        </header>
+        <!-- Área de todo conteúdo -->
+        <main>
+            <article id="colunaA">
+                <h2>Coluna A</h2>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia harum aspernatur molestias amet, inventore blanditiis veniam, eum, illum obcaecati minus expedita. Ut et debitis sit voluptatem dicta autem eius perferendis placeat ea minus porro, illo reprehenderit, qui velit? Quaerat, necessitatibus ratione dolorem excepturi aliquid animi et perspiciatis dolores impedit nostrum!
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae molestias ab sit exercitationem maiores magni, ad illum sint minus dignissimos. Pariatur, fugiat sit veritatis repudiandae voluptatum, vitae cumque aperiam optio in dolor at ratione non perspiciatis neque numquam quod. Iure deserunt, error qui quasi provident unde repudiandae earum aliquam quod.
+                </p>
+            </article>
+            <article id="colunaB">
+                <h2>Coluna B</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam iste magnam ut laboriosam facilis eos quasi ex quos nesciunt soluta distinctio praesentium nostrum odio tempore similique explicabo quaerat, debitis perspiciatis quibusdam. Architecto fuga debitis quibusdam deserunt, odit quidem, ab cumque quaerat molestias veniam laboriosam nobis enim dignissimos aut qui doloremque?
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis fuga voluptate eveniet laboriosam nemo doloremque soluta quia omnis illum molestiae alias dolores quisquam delectus, voluptatibus dolore. Repellendus, animi! Eum deleniti laudantium reprehenderit tenetur consectetur quisquam. Quia dolor iure reiciendis voluptas enim obcaecati. Blanditiis odit sit sapiente, ducimus consequatur laudantium deserunt.
+                </p>
+            </article>
+            <article id="colunaC">
+                <h2>Coluna C</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut cupiditate inventore eum! Ut officiis, voluptate aspernatur nemo eum dolor illum minus sunt illo laboriosam magni sint, nam in dolorum iure, rem consequuntur ea. Dolore officia quibusdam molestias et dolor quae similique sequi natus ipsum nobis hic, vel porro officiis corrupti.
+                </p>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam, qui tempora officia minus cum eum minima magnam ipsum ab expedita, nisi quibusdam nemo quidem labore ex incidunt architecto odit dolores rerum quasi fuga natus accusantium? Magnam commodi iure quisquam perspiciatis pariatur iste laboriosam consequatur! Beatae quisquam delectus laborum deserunt in.
+                </p>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium similique suscipit distinctio nam deserunt exercitationem possimus nisi labore ut id necessitatibus porro totam consequuntur inventore veniam excepturi sequi eligendi architecto expedita quam et, quos accusamus. Iusto, ipsum sed neque saepe fuga in, et recusandae nulla natus nobis, aperiam reiciendis ducimus.
+                </p>
+            </article>
+        </main>
+        <!-- Rodapé -->
+        <footer>
+            <h2>Design Responsivo</h2>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </footer>
+    </div>
+</body>
+</html>
